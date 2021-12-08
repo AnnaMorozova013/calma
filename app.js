@@ -16,8 +16,27 @@ require("./config")(app);
 
 // 👇 Start handling routes here
 // Contrary to the views version, all routes are controlled from the routes/index.js
-const allRoutes = require("./routes");
-app.use("/api", allRoutes);
+//const allRoutes = require("./routes");
+//app.use("/api", allRoutes);
+
+//session config
+
+const session = require('express-session')
+const MongoStore = require('connect-mongo')
+const DB_URL = 'mongodb://localhost/calma'
+
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        cookie: { maxAge: 1000 * 60 * 60 * 24 },
+        resave: true,
+        saveUninitialized: false,
+        store: MongoStore.create({
+            mongoUrl: DB_URL
+        })
+    })
+)
+//end of session config
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
