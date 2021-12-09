@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { signup } from '../services/auth'
 
-export default function Signup() {
+export default function Signup(props) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
@@ -21,7 +21,7 @@ export default function Signup() {
             } else {
                 //user is correctly signed up
                 //add user to state of App.js
-                
+                props.setUser(response); //response from services/auth (returns the user object)
                 //redirect to the welcome page
             }
 
