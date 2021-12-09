@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const User = require('../models/User')
+const bcrypt = require('bcrypt')
+
+const saltRounds = 10
+
 
 router.post('/login', (req, res, next) => {
 	const { username, password } = req.body;
@@ -31,7 +35,7 @@ router.post('/signup', (req, res, next) => {
 	// is the password 4 + characters
 	if (password.length < 4) {
 		// validation failed -> we show the signup form again with a message
-		res.status(400).json({ message: 'Your password needs to be 4 chars min' })
+		res.status(400).json({ message: 'Your password needs to be minimum 4 charachters long' })
 		return;
 	}
 	// is the username not empty
@@ -49,11 +53,12 @@ router.post('/signup', (req, res, next) => {
 			} else {
 				// the username can be used
 				// we hash the password 
-				const salt = bcrypt.genSaltSync();
+				const salt = bcrypt.genSaltSync(saltRounds);
 				const hash = bcrypt.hashSync(password, salt)
 				// create the user
 				User.create({ username: username, password: hash })
 					.then(createdUser => {
+						//log the user in
 						req.session.user = createdUser;
 						res.status(200).json(createdUser);
 					})
@@ -62,5 +67,15 @@ router.post('/signup', (req, res, next) => {
 		})
 });
 
+router.get('/loggedin', (req, res, next) => {
+const user = req.session.user;
+res.json(user)
+});
+
+router.delete('/logout', (req, res, next) => {
+req.session.destroy();
+res.status(200).json({ message: 'successful logout' })	
+}
+)
 
 module.exports = router;
