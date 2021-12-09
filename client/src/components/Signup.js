@@ -8,11 +8,10 @@ export default function Signup() {
 
     const handleSubmit = e => { 
         e.preventDefault();
-        console.log(username, password)
 
-        signup(username, password)
+         signup(username, password)
         .then(response => {
-            console.log(response);
+            
             if (response.message) {
                 //reset form
                 setUsername('');
@@ -49,7 +48,7 @@ export default function Signup() {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button>Sign Up</button>
+                <button type='submit'>Sign Up</button>
                 {message && (
                     <h3>{message}</h3>
                 )}

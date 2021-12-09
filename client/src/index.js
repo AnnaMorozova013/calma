@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import axios from 'axios';
 
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 //get the logged in user from the backend
 //and pass it to App.js
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>,
+  </Router>
+  ,
   document.getElementById('root')
 );
 

@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 const signup = (username, password) => {
-    axios.post('/signup', { username, password })
+   
+ const body = { username, password }
+   return axios.post('/signup', body)
         .then(response => {
-            return response.data
-
-        })
+            return response.data})
         .catch(err => {
             return err.response.data
         })
@@ -15,7 +15,6 @@ const login = (username, password) => {
     axios.post('/login', { username, password })
         .then(response => {
             return response.data
-
         })
         .catch(err => {
             return err.response.data
@@ -34,4 +33,4 @@ const logout = () => {
         })
 }
 
-export { signup, login, logout }
+export  { signup, login, logout }
