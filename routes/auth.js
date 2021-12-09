@@ -68,13 +68,13 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.get('/loggedin', (req, res, next) => {
-const user = req.session.user;
-res.json(user)
+	const user = req.session.user;
+	res.json(user)
 });
 
 router.delete('/logout', (req, res, next) => {
-req.session.destroy();
-res.status(200).json({ message: 'successful logout' })	
+	req.session.destroy();
+	res.status(200).json({ message: 'successful logout' })
 }
 )
 

@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+//get the logged in user from the backend
+//and pass it to App.js
 
 ReactDOM.render(
   <React.StrictMode>

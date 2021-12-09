@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router, 
+  Routes, 
+  Route
+} from 'react-router-dom';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Signup from './components/Signup';
 
-function App() {
+function App(props) {
+
+  const[user, setUser] = useState()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+    <Navbar />
+    <Signup />
+     <Routes>
+     <Route exact path='/signup' component={ Signup } />
+     </Routes>
+     </Router>
+     </div>
   );
 }
 
