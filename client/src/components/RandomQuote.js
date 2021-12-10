@@ -27,9 +27,9 @@ function QuotesGenerator() {
 	return (
 			<div className="quotes-container">
 				<div id="quotes-box">
-                    <h3>Quote of the day</h3>
-					<div class='text'>"{quote}"</div>
-					<div class='author'> {author}</div>
+                    <h3>Get inspired</h3>
+					<div className='text'>"{quote}"</div>
+					<div className='author'> - {author}</div>
 				</div> </div>
     )
     }
