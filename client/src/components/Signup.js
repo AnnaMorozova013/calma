@@ -1,19 +1,20 @@
 import React, { useState } from 'react'
 import { signup } from '../services/auth'
 import Login from '../components/Login'
+import { useNavigate } from 'react-router-dom'
 
 export default function Signup(props) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
 
+    const navigate = useNavigate()
+
     const handleSubmit = e => {
         e.preventDefault();
 
         signup(username, password)
             .then(response => {
-                setUsername('');
-                setPassword('');
 
                 if (response.message) {
                     //reset form
@@ -22,11 +23,8 @@ export default function Signup(props) {
                     //set message
                     setMessage(response.message)
                 } else {
-                    //user is correctly signed up
-                    //add user to state of App.js
-                    props.setUser(response); //response from services/auth (returns the user object)
-                    //redirect to the welcome page
-                    props.history.push('../pages/Welcome.js')
+                    
+                    navigate('/welcome')
                 }
 
             })
@@ -34,7 +32,7 @@ export default function Signup(props) {
     }
 
     return (
-        <> 
+        <>
             <h3>Sign up</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='username'>Username: </label>
@@ -56,8 +54,8 @@ export default function Signup(props) {
                 {message && (
                     <h3>{message}</h3>
                 )}
-            </form>
-            < Login / > 
+                </form>
+            < Login />
         </>
 
     )

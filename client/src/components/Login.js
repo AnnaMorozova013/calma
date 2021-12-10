@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import { login } from '../services/auth'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login(props) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
 
+    const navigate = useNavigate()
+
     const handleSubmit = e => {
         e.preventDefault();
 
         login(username, password)
             .then(response => {
-                setUsername('');
-                setPassword('');
 
                 if (response.message) {
                     //reset form
@@ -21,11 +22,7 @@ export default function Login(props) {
                     //set message
                     setMessage(response.message)
                 } else {
-                    //user is correctly signed up
-                    //add user to state of App.js
-                    props.setUser(response); //response from services/auth (returns the user object)
-                    //redirect to the welcome page
-                    props.history.push('../pages/Welcome.js')
+                    navigate('/welcome')
                 }
 
             })

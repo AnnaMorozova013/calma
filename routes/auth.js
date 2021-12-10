@@ -24,7 +24,7 @@ router.post('/login', (req, res, next) => {
 				res.status(200).json(userFromDB)
 			} else {
 				// password is not correct -> show login again
-				res.status(400).json({ message: 'iInvalid name or password. Try again!' })
+				res.status(400).json({ message: 'Invalid name or password. Try again!' })
 			}
 		})
 });
@@ -49,7 +49,7 @@ router.post('/signup', (req, res, next) => {
 		.then(userFromDB => {
 			// if there is a user
 			if (userFromDB !== null) {
-				res.status(400).json({ message: 'Your username is already taken. Try to log in!' })
+				res.status(400).json({ message: 'Your username is already taken.' })
 			} else {
 				// the username can be used
 				// we hash the password 
