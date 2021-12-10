@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { signup } from '../services/auth'
-import Login from '../components/Login'
+import { login } from '../services/auth'
 
-export default function Signup(props) {
+export default function Login(props) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
@@ -10,7 +9,7 @@ export default function Signup(props) {
     const handleSubmit = e => {
         e.preventDefault();
 
-        signup(username, password)
+        login(username, password)
             .then(response => {
                 setUsername('');
                 setPassword('');
@@ -34,8 +33,8 @@ export default function Signup(props) {
     }
 
     return (
-        <> 
-            <h3>Sign up</h3>
+        <>
+            <h3>Log in</h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='username'>Username: </label>
                 <input
@@ -52,12 +51,11 @@ export default function Signup(props) {
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
-                <button type='submit'>Sign up</button>
+                <button type='submit'>Log in</button>
                 {message && (
                     <h3>{message}</h3>
                 )}
             </form>
-            < Login / > 
         </>
 
     )

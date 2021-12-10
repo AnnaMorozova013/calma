@@ -6,6 +6,7 @@ import {
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
+import Welcome from './pages/Welcome';
 
 function App(props) {
 
@@ -25,7 +26,10 @@ console.log('App.js:', user)
      <Route 
      path='/' 
      element={< Signup />}
-     render={props => <Signup setUser={addUser}{...props} />} />
+     render={props => <Signup setUser={addUser} {...props} />} />
+     <Route 
+     path='/welcome' 
+     element={< Welcome />} />
      </Routes>
      </div>
   );

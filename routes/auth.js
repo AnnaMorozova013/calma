@@ -12,7 +12,7 @@ router.post('/login', (req, res, next) => {
 		.then(userFromDB => {
 			if (userFromDB === null) {
 				// username is not correct -> show login 
-				res.status(400).json({ message: 'invalid credentials' })
+				res.status(400).json({ message: 'Invalid name or password. Try again!' })
 			}
 			// username is correct
 			// check the password against the hash in the database
@@ -24,7 +24,7 @@ router.post('/login', (req, res, next) => {
 				res.status(200).json(userFromDB)
 			} else {
 				// password is not correct -> show login again
-				res.status(400).json({ message: 'invalid credentials' })
+				res.status(400).json({ message: 'iInvalid name or password. Try again!' })
 			}
 		})
 });
@@ -35,12 +35,12 @@ router.post('/signup', (req, res, next) => {
 	// is the password 4 + characters
 	if (password.length < 4) {
 		// validation failed -> we show the signup form again with a message
-		res.status(400).json({ message: 'Your password needs to be minimum 4 charachters long' })
+		res.status(400).json({ message: 'Your password needs to be minimum 4 charachters long.' })
 		return;
 	}
 	// is the username not empty
 	if (username.length === 0) {
-		res.status(400).json({ message: 'Your username cannot be empty' })
+		res.status(400).json({ message: 'Your username cannot be empty.' })
 		return
 	}
 	// validation (format) passed
@@ -49,7 +49,7 @@ router.post('/signup', (req, res, next) => {
 		.then(userFromDB => {
 			// if there is a user
 			if (userFromDB !== null) {
-				res.status(400).json({ message: 'Your username is already taken' })
+				res.status(400).json({ message: 'Your username is already taken. Try to log in!' })
 			} else {
 				// the username can be used
 				// we hash the password 
