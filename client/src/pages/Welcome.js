@@ -9,13 +9,21 @@ const unsplashimg = {
 
 export default function Welcome() {
   return (
-    <div className>
+    <>
+      <div className='randomImage' >
+        <img
+          src={unsplashimg.src}
+          alt={unsplashimg.alt}
+        />
+      </div>
+      <div class="module">
+  
+  <header>
+    <h1>
       < RandomQuote />
-      <img className='randomImage'
-        src={unsplashimg.src}
-        alt={unsplashimg.alt}
-      />
-
-    </div>
+    </h1>
+  </header>
+</div>
+    </>
   )
 }

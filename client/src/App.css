@@ -2,3 +2,30 @@
   text-align: center;
 }
 
+.randomImage {
+position: relative;
+opacity: 80%;
+}
+
+.module > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: inherit;
+  background-attachment: fixed;
+}
+
+.module > header > h1 {
+  margin: 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px #837d7d;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
