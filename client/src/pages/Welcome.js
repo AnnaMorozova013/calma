@@ -6,6 +6,9 @@ const unsplashimg = {
   alt: 'random unsplash image'
 };
 
+const current = new Date();
+const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`
+
 
 export default function Welcome() {
   return (
@@ -19,7 +22,7 @@ export default function Welcome() {
       <div class="module">
   
   <header>
-    <h1>
+  <h1> { date } 
       < RandomQuote />
     </h1>
   </header>

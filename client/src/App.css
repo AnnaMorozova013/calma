@@ -1,16 +1,17 @@
 .App {
   text-align: center;
+  font-family: Gidole;
 }
 
 .randomImage {
 position: relative;
-opacity: 80%;
+opacity: 70%;
 }
 
 .module > header {
+  font-family: Gidole;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   padding: 20px 10px;
   background: inherit;
@@ -18,14 +19,14 @@ opacity: 80%;
 }
 
 .module > header > h1 {
-  margin: 0;
+  margin-left: 400px;
+  margin-right: 400px;
   color: white;
   position: relative;
-  z-index: 1;
-  text-shadow: 2px 2px #837d7d;
-  
+  text-shadow: 1px 1px #837d7d;
+  backdrop-filter: blur(10px);
 }
 
-* {
-  box-sizing: border-box;
+.author {
+  font-size: 25px;
 }
