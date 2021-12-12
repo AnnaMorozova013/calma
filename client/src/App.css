@@ -61,7 +61,7 @@ position: relative;
 
 .center {
   width: 180px;
-  height: 60px;
+  height: 30px;
   position: absolute;
 }
 
@@ -86,7 +86,6 @@ svg {
   stroke-dasharray: 150 480;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
-
 }
 
 .btn:hover {
@@ -99,6 +98,6 @@ svg {
 
 .btn span {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 100;
 }

@@ -19,8 +19,8 @@ export default function Welcome() {
           alt={unsplashimg.alt}
         />
       </div>
-      <div class="module">
-  
+      
+      <div className="module">
   <header>
   <h2>{ date } </h2>
   <h1>  < RandomQuote />
@@ -29,8 +29,8 @@ export default function Welcome() {
     <div className= "center">
       <div className="btn">
         <svg width="180px" height="30px" viewBox="0 0 180 30" className="border">
-          <polyline points="179,1 179,29 1,29 1,1 179,1" className="bg-line" />
-          <polyline points="179,1 179,29 1,29 1,1 179,1" className="hl-line" />
+          <polyline points="180,1 180,30 1,30 1,1 180,1" className="bg-line" />
+          <polyline points="180,1 180,30 1,30 1,1 180,1" className="hl-line" />
         </svg>
         <span>Click to continue</span>
     </div>
