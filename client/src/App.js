@@ -6,6 +6,7 @@ import {
 import React, { useState } from 'react';
 import Signup from './components/Signup';
 import Welcome from './pages/Welcome';
+import Mood from './pages/Mood';
 
 function App(props) {
 
@@ -25,6 +26,8 @@ console.log('App.js:', user)
      render={props => <Signup setUser={addUser} {...props} />} />
      <Route 
      path='/welcome' element={< Welcome />} />
+     <Route 
+     path='/mood' element={< Mood />} />
      </Routes>
      </div>
   );

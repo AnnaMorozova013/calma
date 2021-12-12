@@ -5,7 +5,6 @@
 
 .randomImage {
 position: relative;
-opacity: 70%;
 }
 
 .module > header {
@@ -19,14 +18,87 @@ opacity: 70%;
 }
 
 .module > header > h1 {
+  top: 5px;
+  bottom: 5px;
+  border: 3px solid #cfcfcf;
   margin-left: 400px;
   margin-right: 400px;
   color: white;
   position: relative;
-  text-shadow: 1px 1px #837d7d;
+  text-shadow: 1px 1px #9c9c9c;
+  backdrop-filter: blur(10px);
+}
+
+.module > header > h2 {
+  top: 10px;
+  bottom: 20px;
+  border: 3px solid #cfcfcf;
+  margin-left: 400px;
+  margin-right: 400px;
+  color: white;
+  position: relative;
+  text-shadow: 1px 1px #9c9c9c;
   backdrop-filter: blur(10px);
 }
 
 .author {
-  font-size: 25px;
+  font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 180px;
+  height: 60px;
+  position: absolute;
+}
+
+.btn {
+  width: 180px;
+  height: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 1.5px solid #cfcfcf;
+  outline: none;
+  transition: 1s ease-in-out;
+  backdrop-filter: blur(10px);
+  font-family: Gidole;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
 }
