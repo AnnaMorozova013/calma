@@ -7,6 +7,11 @@
 position: relative;
 }
 
+.button {
+  text-align: center;
+  font-family: Gidole;
+}
+
 .module > header {
   font-family: Gidole;
   position: absolute;
@@ -46,12 +51,51 @@ position: relative;
 }
 
 .active {
-  height: 200px;
-  width: 200px;
-}
+  margin-left: 10px; 
+  float: left;
+  text-align: center;
 
+}
 
 .inactive {
-  height: 200px;
+    margin-left: 10px; 
+    float: left;
+    text-align: center;
+  
+  }
+
+
+.active img {
   width: 200px;
+  height: 200px;
 }
+
+.inactive img {
+  width: 200px;
+  height: 200px;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+.on {
+  color: rgb(255, 188, 5);
+}
+
+.off {
+  color: rgb(0, 0, 0);
+}
+
+.square {
+  font-size: 90px;
+}
+
+
+
+

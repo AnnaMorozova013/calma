@@ -25,12 +25,16 @@ console.log('App.js:', user)
      path='/' 
      element={< Signup />}
      render={props => <Signup setUser={addUser} {...props} />} />
+
      <Route 
      path='/welcome' element={< Welcome />} />
+
      <Route 
      path='/mood' element={< Mood />} />
+
      <Route 
-     path='/mood' element={< Survey />} />
+     path='/survey' element={< Survey />} />
+     
      </Routes>
      </div>
   );

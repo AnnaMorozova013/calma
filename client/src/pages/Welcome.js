@@ -1,6 +1,7 @@
 import React from 'react'
 import RandomQuote from '../components/RandomQuote'
 import { Link } from 'react-router-dom';
+import Button from "react-bootstrap/Button";
 
 const unsplashimg = {
   src: 'https://source.unsplash.com/1600x900/?nature',
@@ -25,9 +26,11 @@ export default function Welcome() {
   <h2>{ date } </h2>
   <h1>  < RandomQuote />
     </h1>
-  <Link to='/mood'>
-        <span>Click to continue</span>
-  </Link>
+            <Link to='/mood'>
+    <Button>
+          Start
+    </Button>
+</Link>
  </header>
 </div>
     </>
