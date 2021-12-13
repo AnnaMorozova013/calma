@@ -25,16 +25,8 @@ export default function Welcome() {
   <h2>{ date } </h2>
   <h1>  < RandomQuote />
     </h1>
-  <Link to='/mood' className="container">
-    <div className= "center">
-      <div className="btn">
-        <svg width="180px" height="30px" viewBox="0 0 180 30" className="border">
-          <polyline points="180,1 180,30 1,30 1,1 180,1" className="bg-line" />
-          <polyline points="180,1 180,30 1,30 1,1 180,1" className="hl-line" />
-        </svg>
+  <Link to='/mood'>
         <span>Click to continue</span>
-    </div>
-  </div>
   </Link>
  </header>
 </div>

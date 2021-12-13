@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import Signup from './components/Signup';
 import Welcome from './pages/Welcome';
 import Mood from './pages/Mood';
+import Survey from './pages/Survey'
 
 function App(props) {
 
@@ -28,6 +29,8 @@ console.log('App.js:', user)
      path='/welcome' element={< Welcome />} />
      <Route 
      path='/mood' element={< Mood />} />
+     <Route 
+     path='/mood' element={< Survey />} />
      </Routes>
      </div>
   );
