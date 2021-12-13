@@ -5,7 +5,6 @@ export default function Survey() {
     return (
         <div>
         < MoodRating />
-       
         </div>
     )
 }

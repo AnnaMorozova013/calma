@@ -75,7 +75,7 @@ position: relative;
   height: 200px;
 }
 
-button {
+#mood-button {
   background-color: transparent;
   outline: none;
   border: none;
