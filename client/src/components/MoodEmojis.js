@@ -87,13 +87,10 @@ export default function MoodEmojis() {
         axios
         .post('/addMood', oneEmotion)
         //each time button clicked, info sent to server (/addMood)
-        .then((response) => {
-            navigate('/survey')
+        .then((response) => {    
         })
-        .catch((err) => {
-            console.log(err)
-        })
-    }
+        navigate('/survey'
+        )}
 
     return (
         <>
