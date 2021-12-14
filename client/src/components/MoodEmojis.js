@@ -83,110 +83,111 @@ export default function MoodEmojis() {
     const navigate = useNavigate()
     const handleAddMood = (e) => {
         e.preventDefault(e);
-        const oneEmotion = {emotion}
+        const oneEmotion = { emotion }
         axios
-        .post('/addMood', oneEmotion)
-        //each time button clicked, info sent to server (/addMood)
-        .then((response) => {    
-        })
+            .post('/addMood', oneEmotion)
+            //each time button clicked, info sent to server (/addMood)
+            .then((response) => {
+            })
         navigate('/survey'
-        )}
+        )
+    }
 
     return (
         <>
             <h1>How are you feeling today?</h1>
-                <div className='active'>
-                    {active ? (
-                        <img className='active'
-                            src={happyColor}
-                            alt='happy'
-                            onClick={() => handleChangeHappy()}
-                        />
+            <div className='active'>
+                {active ? (
+                    <img className='active'
+                        src={happyColor}
+                        alt='happy'
+                        onClick={() => handleChangeHappy()}
+                    />
 
-                    ) : (
-                        <img className='inactive'
-                            src={happyBW}
-                            alt='happy'
-                            onClick={() => handleChangeHappy()}
-                        />
-                    )}
-                    <h3>Happy</h3>
-                </div>
+                ) : (
+                    <img className='inactive'
+                        src={happyBW}
+                        alt='happy'
+                        onClick={() => handleChangeHappy()}
+                    />
+                )}
+                <h3>Happy</h3>
+            </div>
 
-                <div className='active'>
-                    {active1 ? (
-                        <img className='active'
-                            src={contentColor}
-                            alt='content'
-                            onClick={() => handleChangeContent()}
-                        />
-                    ) : (
-                        <img className='inactive'
-                            src={contentBW}
-                            alt='content'
-                            onClick={() => handleChangeContent()}
-                        />
-                    )}
-                    <h3>Content</h3>
-                </div>
+            <div className='active'>
+                {active1 ? (
+                    <img className='active'
+                        src={contentColor}
+                        alt='content'
+                        onClick={() => handleChangeContent()}
+                    />
+                ) : (
+                    <img className='inactive'
+                        src={contentBW}
+                        alt='content'
+                        onClick={() => handleChangeContent()}
+                    />
+                )}
+                <h3>Content</h3>
+            </div>
 
-                <div className='active'>
-                    {active2 ? (
-                        <img className='active'
-                            src={sleepColor}
-                            alt='sleep'
-                            onClick={() => handleChangeSleep()}
-                        />
-                    ) : (
-                        <img className='inactive'
-                            src={sleepBW}
-                            alt='sleep'
-                            onClick={() => handleChangeSleep()}
-                        />
-                    )}
-                    <h3>Sleepy</h3>
-                </div>
+            <div className='active'>
+                {active2 ? (
+                    <img className='active'
+                        src={sleepColor}
+                        alt='sleep'
+                        onClick={() => handleChangeSleep()}
+                    />
+                ) : (
+                    <img className='inactive'
+                        src={sleepBW}
+                        alt='sleep'
+                        onClick={() => handleChangeSleep()}
+                    />
+                )}
+                <h3>Sleepy</h3>
+            </div>
 
-                <div className='active'>
-                    {active3 ? (
-                        <img className='active'
-                            src={worriedColor}
-                            alt='worried'
-                            onClick={() => handleChangeWorried()}
-                        />
-                    ) : (
-                        <img className='inactive'
-                            src={worriedBW}
-                            alt='worried'
-                            onClick={() => handleChangeWorried()}
-                        />
-                    )}
-                    <h3>Worried</h3>
-                </div>
+            <div className='active'>
+                {active3 ? (
+                    <img className='active'
+                        src={worriedColor}
+                        alt='worried'
+                        onClick={() => handleChangeWorried()}
+                    />
+                ) : (
+                    <img className='inactive'
+                        src={worriedBW}
+                        alt='worried'
+                        onClick={() => handleChangeWorried()}
+                    />
+                )}
+                <h3>Worried</h3>
+            </div>
 
-                <div className='active'>
-                    {active4 ? (
-                        <img className='active'
-                            src={sadColor}
-                            alt='sad'
-                            onClick={() => handleChangeSad()}
-                        />
-                    ) : (
-                        <img className='inactive'
-                            src={sadBW}
-                            alt='sad'
-                            onClick={() => handleChangeSad()}
-                        />
-                    )}
-                    <h3>Sad</h3>
-                </div>
-            
-                <Link to='/survey'>
-                    <Button onClick={handleAddMood}>
-                        Continue
-                    </Button>
-                </Link>
-            
-                </>
+            <div className='active'>
+                {active4 ? (
+                    <img className='active'
+                        src={sadColor}
+                        alt='sad'
+                        onClick={() => handleChangeSad()}
+                    />
+                ) : (
+                    <img className='inactive'
+                        src={sadBW}
+                        alt='sad'
+                        onClick={() => handleChangeSad()}
+                    />
+                )}
+                <h3>Sad</h3>
+            </div>
+
+            <Link to='/survey'>
+                <Button onClick={handleAddMood}>
+                    Continue
+                </Button>
+            </Link>
+
+        </>
     )
 }
