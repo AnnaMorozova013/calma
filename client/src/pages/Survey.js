@@ -1,10 +1,10 @@
 import React from 'react'
-import MoodRating from '../components/MoodRating'
+import SurveyRating from '../components/SurveyRating'
 
 export default function Survey() {
     return (
         <div>
-        < MoodRating />
+        < SurveyRating />
         </div>
     )
 }

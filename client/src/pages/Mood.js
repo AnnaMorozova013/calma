@@ -1,11 +1,11 @@
 import React from 'react'
-import MoodImages from '../components/MoodImages'
+import MoodEmojis from '../components/MoodEmojis'
 
 export default function Mood() {
 
     return (
         <div>
-           < MoodImages />
+           < MoodEmojis />
         </div>
     )
 }

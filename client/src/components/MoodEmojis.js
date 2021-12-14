@@ -12,7 +12,7 @@ import sleepColor from '../images/sleep-color.png'
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 
-export default function MoodImages() {
+export default function MoodEmojis() {
 
     const [active, setActive] = useState(false)
     const [active1, setActive1] = useState(false)
