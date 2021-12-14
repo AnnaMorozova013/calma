@@ -23,7 +23,6 @@ export default function Signup(props) {
                     //set message
                     setMessage(response.message)
                 } else {
-                    
                     navigate('/welcome')
                 }
 

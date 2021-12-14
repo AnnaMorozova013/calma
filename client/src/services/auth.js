@@ -21,12 +21,6 @@ const login = (username, password) => {
         })
 }
 
-const addMood = () => {
-    return axios.post('/addMood', {
-        
-    })
-}
-
 const logout = () => {
     return axios.delete('/logout')
         .then(response => {

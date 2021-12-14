@@ -18,8 +18,7 @@ router.post('/login', (req, res, next) => {
 			// check the password against the hash in the database
 			// compareSync() -> true or false
 			if (bcrypt.compareSync(password, userFromDB.password)) {
-				// it matches -> credentials are correct -> user get's logged in
-				// req.session.<some key (usually 'user')>
+				// it matches -> credentials are correct -> user gets logged in
 				req.session.user = userFromDB
 				res.status(200).json(userFromDB)
 			} else {

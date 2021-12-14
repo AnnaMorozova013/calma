@@ -11,6 +11,8 @@ import sleepBW from '../images/sleep-bw.png'
 import sleepColor from '../images/sleep-color.png'
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 export default function MoodEmojis() {
 
@@ -20,15 +22,17 @@ export default function MoodEmojis() {
     const [active3, setActive3] = useState(false)
     const [active4, setActive4] = useState(false)
 
+    const [emotion, setEmotion] = useState('')
+
     const handleChangeHappy = () => {
         setActive((emoji) => {
             return !emoji
-
         })
         setActive1(false)
         setActive2(false)
         setActive3(false)
         setActive4(false)
+        setEmotion('happy')
     }
 
     const handleChangeContent = () => {
@@ -39,6 +43,7 @@ export default function MoodEmojis() {
         setActive2(false)
         setActive3(false)
         setActive4(false)
+        setEmotion('content')
     }
 
     const handleChangeSleep = () => {
@@ -49,6 +54,7 @@ export default function MoodEmojis() {
         setActive1(false)
         setActive3(false)
         setActive4(false)
+        setEmotion('sleepy')
     }
 
     const handleChangeWorried = () => {
@@ -59,6 +65,7 @@ export default function MoodEmojis() {
         setActive1(false)
         setActive2(false)
         setActive4(false)
+        setEmotion('worried')
     }
 
     const handleChangeSad = () => {
@@ -69,6 +76,23 @@ export default function MoodEmojis() {
         setActive1(false)
         setActive2(false)
         setActive3(false)
+        setEmotion('sad')
+    }
+
+    //create button handle 
+    const navigate = useNavigate()
+    const handleAddMood = (e) => {
+        e.preventDefault(e);
+        const oneEmotion = {emotion}
+        axios
+        .post('/addMood', oneEmotion)
+        //each time button clicked, info sent to server (/addMood)
+        .then((response) => {
+            navigate('/survey')
+        })
+        .catch((err) => {
+            console.log(err)
+        })
     }
 
     return (
@@ -161,7 +185,7 @@ export default function MoodEmojis() {
                 </div>
             
                 <Link to='/survey'>
-                    <Button>
+                    <Button onClick={handleAddMood}>
                         Continue
                     </Button>
                 </Link>

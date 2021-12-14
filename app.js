@@ -42,6 +42,9 @@ app.use(
 const auth = require('./routes/auth')
 app.use('/', auth)
 
+const data = require('./routes/data')
+app.use('/', data)
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
