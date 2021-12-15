@@ -41,8 +41,8 @@ function App(props) {
         <Route
           path='/journal' element={< Journal />} />
 
-          <Route
-          path='/summary' element={< Summary />} />
+        <Route
+          path='/summary' element={< Summary setUser={addUser} />} />
 
       </Routes>
     </div>
