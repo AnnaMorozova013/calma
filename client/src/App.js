@@ -9,6 +9,7 @@ import Welcome from './pages/Welcome';
 import Mood from './pages/Mood';
 import Survey from './pages/Survey'
 import Journal from './pages/Journal'
+import Summary from './pages/Summary'
 
 function App(props) {
 
@@ -39,6 +40,9 @@ function App(props) {
 
         <Route
           path='/journal' element={< Journal />} />
+
+          <Route
+          path='/summary' element={< Summary />} />
 
       </Routes>
     </div>

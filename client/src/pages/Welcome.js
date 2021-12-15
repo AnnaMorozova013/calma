@@ -8,7 +8,7 @@ const unsplashimg = {
   alt: 'random unsplash image'
 };
 const current = new Date();
-const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`
+const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`
 
 
 export default function Welcome() {
@@ -20,19 +20,19 @@ export default function Welcome() {
           alt={unsplashimg.alt}
         />
       </div>
-      
+
       <div className="module">
-  <header>
-  <h2>{ date } </h2>
-  <h1>  < RandomQuote />
-    </h1>
-            <Link to='/mood'>
-    <Button>
-          Start
-    </Button>
-</Link>
- </header>
-</div>
+        <header>
+          <h2>{date} </h2>
+          <h1>  < RandomQuote />
+          </h1>
+          <Link to='/mood'>
+            <Button>
+              Start
+            </Button>
+          </Link>
+        </header>
+      </div>
     </>
   )
 }

@@ -5,7 +5,7 @@ export default function Mood() {
 
     return (
         <div>
-           < MoodEmojis />
+            < MoodEmojis />
         </div>
     )
 }

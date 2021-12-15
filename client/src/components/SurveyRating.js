@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
 
 const SurveyRating = () => {
     const [rating1, setRating1] = useState(0);
@@ -23,14 +24,15 @@ const SurveyRating = () => {
     const [ratingWork, setRatingWork] = useState(0);
 
     //create button handle 
+    const navigate = useNavigate()
     const handleAddSurvey = (e) => {
         e.preventDefault(e);
         axios
-            .post('/addSurvey', {ratingSleep, ratingSocial, ratingFood, ratingSport, ratingWork})
-            //each time button clicked, info sent to server (/addMood)
+            .post('/addSurvey', { ratingSleep, ratingSocial, ratingFood, ratingSport, ratingWork })
+            //each time button clicked, info sent to server (/addSurvey)
             .then((response) => {
             })
-        
+        navigate('/journal')
     }
 
 

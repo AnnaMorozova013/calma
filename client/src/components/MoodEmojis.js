@@ -89,8 +89,7 @@ export default function MoodEmojis() {
             //each time button clicked, info sent to server (/addMood)
             .then((response) => {
             })
-        navigate('/survey'
-        )
+        navigate('/survey')
     }
 
     return (
