@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import { logout } from '../services/auth';
@@ -14,7 +14,6 @@ export default function Summary(props) {
             )
     }
 
-
     //state for info from DB
     const [objectArray, setObjectArray] = useState([])
 
@@ -27,10 +26,18 @@ export default function Summary(props) {
             })
             .catch((err) => console.log(err.data))
     }
-    showSummary()
+
+    useEffect(() => {
+        showSummary()
+    }, [])
+
+    const changeDateFormat = (string) => {
+        const parsed = Date.parse(string)
+        const date = new Date(parsed)
+        return `${date.getDay()}/${date.getMonth()+1}/${date.getFullYear()}`
+    }
 
     return (
-
         <div>
             <h1>Hey you! </h1>
             <Link to='/'>
@@ -40,7 +47,7 @@ export default function Summary(props) {
             </Link>
             {objectArray.map((element) => (
                 <div>
-                    <p> Your recap from <b>{element.createdAt}</b> </p>
+                    <p> Your recap <b>{changeDateFormat(element.createdAt)}</b> </p>
                     <p> You felt {element.mood} </p>
                     <p> You ranked your sleep quality {element.sleep}/5</p>
                     <p> You ranked your social life {element.social}/5</p>
@@ -48,8 +55,8 @@ export default function Summary(props) {
                     <p> You ranked your sport activities {element.sport}/5</p>
                     <p> You ranked your work {element.sport}/5</p>
                     <p> Here is your journal entry: <i>{element.journal}</i></p>
-                </div>))}
-
+                </div>))
+            }
         </div>
     )
-}
+        }

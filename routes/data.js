@@ -56,9 +56,6 @@ router.post('/addJournal', (req, res, next) => {
 
 router.post('/userSummary', (req, res, next) => {
     username = req.session.user.username
-    createdAt = req.session.user.createdAt
-    console.log(createdAt)
-
 
     //send 5 last entries of a user to client
     Data.find({ username }).sort({ _id: -1 }).limit(5)
@@ -68,7 +65,6 @@ router.post('/userSummary', (req, res, next) => {
         }
         )
         .catch(err => console.log(err))
-
 }
 )
 
