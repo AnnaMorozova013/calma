@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const Data = require('../models/Data')
+const Data = require('../models/Data');
+const ObjectId = require("mongoose").Types.ObjectId
 
 router.post('/addMood', (req, res, next) => {
     username = req.session.user.username
@@ -36,7 +37,6 @@ router.post('/addSurvey', (req, res, next) => {
 router.post('/addJournal', (req, res, next) => {
     text = req.body.text
     username = req.session.user.username
-    console.log('addJournalyworks', text)
 
     Data.find({ username }).sort({ _id: -1 }).limit(1)
         .then((foundInDB) => {
@@ -49,6 +49,30 @@ router.post('/addJournal', (req, res, next) => {
         }
         )
         .catch(err => console.log(err))
+}
+)
+
+//this sends info from DB to client(/summary)
+
+router.post('/userSummary', (req, res, next) => {
+    username = req.session.user.username
+    createdAt = req.session.user.createdAt
+    console.log(createdAt)
+
+    function convert(createdAt) {
+//convert the data format
+    }
+
+
+    //send 5 last entries of a user to client
+    Data.find({ username }).sort({ _id: -1 }).limit(5)
+        .then((foundInDB) => {
+            res.status(200)
+                .json({ foundInDB })
+        }
+        )
+        .catch(err => console.log(err))
+
 }
 )
 
