@@ -34,7 +34,7 @@ export default function Summary(props) {
     const changeDateFormat = (string) => {
         const parsed = Date.parse(string)
         const date = new Date(parsed)
-        return `${date.getDay()}/${date.getMonth()+1}/${date.getFullYear()}`
+        return `${date.getDay()}/${date.getMonth() + 1}/${date.getFullYear()}`
     }
 
     return (
@@ -59,4 +59,4 @@ export default function Summary(props) {
             }
         </div>
     )
-        }
+}
