@@ -11,17 +11,17 @@ export default function Journal() {
     const onChangeHandler = (e) => {
         setText(e.target.value)
     }
-    
+
     //create button handle 
     const navigate = useNavigate()
     const handleAddJournal = (e) => {
         e.preventDefault(e);
         axios
-            .post('/addJournal', {text})
+            .post('/addJournal', { text })
             //each time button clicked, info sent to server (/addJournal)
             .then((response) => {
             })
-            navigate('/summary')
+        navigate('/summary')
     }
 
     return (

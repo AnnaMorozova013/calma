@@ -59,10 +59,6 @@ router.post('/userSummary', (req, res, next) => {
     createdAt = req.session.user.createdAt
     console.log(createdAt)
 
-    function convert(createdAt) {
-//convert the data format
-    }
-
 
     //send 5 last entries of a user to client
     Data.find({ username }).sort({ _id: -1 }).limit(5)
