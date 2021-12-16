@@ -3,6 +3,7 @@ import { signup } from '../services/auth'
 import Login from '../components/Login'
 import { useNavigate } from 'react-router-dom'
 
+
 export default function Signup(props) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')

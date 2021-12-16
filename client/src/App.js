@@ -11,6 +11,7 @@ import Survey from './pages/Survey'
 import Journal from './pages/Journal'
 import Summary from './pages/Summary'
 
+
 function App(props) {
 
   const [user, setUser] = useState(props.user)

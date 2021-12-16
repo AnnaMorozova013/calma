@@ -3,6 +3,7 @@ import RandomQuote from '../components/RandomQuote'
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 
+
 const unsplashimg = {
   src: 'https://source.unsplash.com/1600x900/?nature',
   alt: 'random unsplash image'
