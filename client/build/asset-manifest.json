@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81c05fe9.chunk.css",
+    "main.js": "/static/js/main.a3cd4c76.chunk.js",
+    "main.js.map": "/static/js/main.a3cd4c76.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.eecc6ff6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.eecc6ff6.js.map",
+    "static/js/2.fb58559c.chunk.js": "/static/js/2.fb58559c.chunk.js",
+    "static/js/2.fb58559c.chunk.js.map": "/static/js/2.fb58559c.chunk.js.map",
+    "static/js/3.30df40d7.chunk.js": "/static/js/3.30df40d7.chunk.js",
+    "static/js/3.30df40d7.chunk.js.map": "/static/js/3.30df40d7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.81c05fe9.chunk.css.map": "/static/css/main.81c05fe9.chunk.css.map",
+    "static/js/2.fb58559c.chunk.js.LICENSE.txt": "/static/js/2.fb58559c.chunk.js.LICENSE.txt",
+    "static/media/content-bw.1c27e522.png": "/static/media/content-bw.1c27e522.png",
+    "static/media/content-color.c16cf08b.png": "/static/media/content-color.c16cf08b.png",
+    "static/media/happy-bw.84d6008b.png": "/static/media/happy-bw.84d6008b.png",
+    "static/media/happy-color.0753f127.png": "/static/media/happy-color.0753f127.png",
+    "static/media/sad-bw.60414845.png": "/static/media/sad-bw.60414845.png",
+    "static/media/sad-color.3c121a92.png": "/static/media/sad-color.3c121a92.png",
+    "static/media/sleep-bw.6d27bbba.png": "/static/media/sleep-bw.6d27bbba.png",
+    "static/media/sleep-color.f38f842c.png": "/static/media/sleep-color.f38f842c.png",
+    "static/media/worried-bw.c6690e8f.png": "/static/media/worried-bw.c6690e8f.png",
+    "static/media/worried-color.d7230360.png": "/static/media/worried-color.d7230360.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eecc6ff6.js",
+    "static/js/2.fb58559c.chunk.js",
+    "static/css/main.81c05fe9.chunk.css",
+    "static/js/main.a3cd4c76.chunk.js"
+  ]
+}
