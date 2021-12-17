@@ -180,13 +180,13 @@ export default function MoodEmojis() {
                 )}
                 <h3>Sad</h3>
             </div>
-
+            <div className='moodLink'>
             <Link to='/survey'>
-                <Button onClick={handleAddMood}>
+                <Button className="button-55" role="button" onClick={handleAddMood}>
                     Continue
                 </Button>
             </Link>
-
+</div>
         </>
     )
 }

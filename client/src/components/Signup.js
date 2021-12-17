@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { signup } from '../services/auth'
 import Login from '../components/Login'
 import { useNavigate } from 'react-router-dom'
+import logo from '../images/logo.png'
 
 
 export default function Signup(props) {
@@ -33,10 +34,14 @@ export default function Signup(props) {
 
     return (
         <>
-            <h3>Sign up</h3>
-            <form onSubmit={handleSubmit}>
+        <img className='logo' src={logo} alt=''/>
+        <form>
+        <div class="segment">
+    <h3>Sign up</h3>
+  </div>
+            <label onSubmit={handleSubmit} />
                 <label htmlFor='username'>Username: </label>
-                <input
+                <input className='red'
                     type='text'
                     name='username'
                     value={username}

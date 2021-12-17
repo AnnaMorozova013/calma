@@ -40,7 +40,6 @@ export default function Login(props) {
                     value={username}
                     onChange={e => setUsername(e.target.value)}
                 />
-
                 <label htmlFor='password'>Password: </label>
                 <input
                     type='password'

@@ -164,8 +164,9 @@ const SurveyRating = () => {
                         </button>
                     );
                 })}
+                <br></br>
                 <Link to='/journal'>
-                    <Button onClick={handleAddSurvey}>
+                    <Button className="button-55" role="button" onClick={handleAddSurvey}>
                         Continue
                     </Button>
                 </Link>
