@@ -157,14 +157,14 @@ margin-left: 3px;
 	-o-user-select: none;
 	user-select: none; 
 }
-#text {
-	width:500px;
+#text2 {
+	width:700px;
 	overflow:hidden;
 	background-color:#FFF;
 	color:#222;
 	font-family:Courier, monospace;
 	font-weight:normal;
-	font-size:24px;
+	font-size:20px;
 	resize:none;
 	line-height:40px;
 	padding-left:100px;
@@ -212,4 +212,6 @@ margin-left: 3px;
   border-radius: 125px/12px;
   box-shadow: 0 0 8px black;
 }
+
+
 
